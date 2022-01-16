@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "dist",
+    "module": "esnext",
+    "target": "es6",
+    "lib": ["es2019", "dom"],
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noEmitOnError": true,
+    "jsx": "react",
+    "strict": true
+  },
+  "include": ["src/"]
+}
