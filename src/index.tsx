@@ -9,12 +9,16 @@ import { Interval } from 'luxon';
 import * as React from 'react';
 import Calendar from 'react-calendar';
 
-interface TimeRange {
-  start: Date;
-  end: Date;
+export interface TimeRange {
+  from: Date;
+  to: Date;
 }
 
-interface Props extends Pick<TextFieldProps, 'placeholder' | 'size' | 'sx'> {
+interface Props
+  extends Pick<
+    TextFieldProps,
+    'placeholder' | 'size' | 'sx' | 'variant' | 'margin' | 'label'
+  > {
   timeRange: TimeRange | null;
   onChange: (val: TimeRange | null) => void;
 }
@@ -29,15 +33,13 @@ export default function DateRangeSelector({
   return (
     <div style={{ position: 'relative' }}>
       <TextField
-        {...props}
         fullWidth={true}
         variant="outlined"
         inputProps={{ readOnly: true }}
+        {...props}
         value={
           timeRange
-            ? Interval.fromDateTimes(timeRange.start, timeRange.end).toFormat(
-                'D'
-              )
+            ? Interval.fromDateTimes(timeRange.from, timeRange.to).toFormat('D')
             : ''
         }
         onClick={evt => setAnchor(evt.currentTarget)}
@@ -71,8 +73,8 @@ export default function DateRangeSelector({
             if (Array.isArray(val)) {
               setAnchor(null);
               onChange({
-                start: val[0],
-                end: val[1],
+                from: val[0],
+                to: val[1],
               });
             }
           }}
