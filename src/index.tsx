@@ -31,7 +31,7 @@ export default function DateRangeSelector({
   const [anchor, setAnchor] = React.useState<HTMLElement | null>(null);
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div style={{ position: 'relative', lineHeight: 'initial' }}>
       <TextField
         fullWidth={true}
         variant="outlined"
