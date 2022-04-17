@@ -1,7 +1,7 @@
 {
   "name": "cnl-mui-daterange",
   "sideEffects": false,
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Date range selector using MUI & React-Calendar",
   "author": "Yuanzong Qiu <congge@gmail.com>",
   "license": "MIT",
