@@ -27,7 +27,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "luxon": "^2.3.2",
+    "luxon": "^3.0.1",
     "react-calendar": "^3.7.0"
   },
   "devDependencies": {
